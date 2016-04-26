@@ -44,7 +44,7 @@ a {
 
 a:hover,
 a:focus {
-  color: #EF881E;
+  color: #9c27c1;
   outline: 0;
 }
 
@@ -56,6 +56,52 @@ p {
   font-size: 17px;
   line-height: 1.7;
   margin-bottom: 20px;
+}
+
+.project-box {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  max-width: 650px;
+  overflow:hidden;
+}
+
+.project-box .project-box-caption {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  background: rgba(44,44,44,.8);
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
+}
+
+.project-box .project-box-caption .project-box-content {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.project-box:hover .project-box-caption {
+  opacity: 1;
+}
+
+.project-box:hover img {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.project-box img {
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .wide-space {
@@ -98,6 +144,11 @@ p {
 
 section {
   padding: 70px 0;
+}
+
+strong {
+  font-style: italic;
+  text-decoration: underline;
 }
 
 aside {
@@ -234,7 +285,7 @@ header {
   color: #fff;
   width: 100%;
   background-color: #c9c9c9;
-  background-image: url('https://splashbase.s3.amazonaws.com/lifeofpix/regular/Life-of-Pix-free-stock-photos-Slate-Stone-Xeromatic-1440x953.jpg');
+  background-image: url('https://s3.amazonaws.com/mrbucket55/protfolio_ss.png');
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -263,18 +314,24 @@ header .header-content .inner p {
 }
 
 #video-background {
-position: absolute;
-right: 0;
-bottom: 0;
-min-width: 100%;
-min-height: 100%;
-width: auto;
-height: auto;
-z-index: 1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  -webkit-filter:blur(5px);
 }
 
 #video-background.collapsing {
-display:none;
+  display:none;
+}
+
+#four {
+  min-height: 350px;
+  padding: 10px;
 }
 
 footer {
@@ -318,7 +375,7 @@ footer {
 
   section {
       min-height: 450px;
-      padding: 75px 0;
+      padding: 100px 0;
   }
 
 }
